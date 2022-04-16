@@ -89,7 +89,7 @@ batch_size = 20
 train_set = tf.data.Dataset.from_generator(bộ_phát_dữ_liệu, args=[train_file, batch_size], output_types=(tf.float32, tf.float32))
 val_set = tf.data.Dataset.from_generator(bộ_phát_dữ_liệu, args=[val_file, batch_size], output_types=(tf.float32, tf.float32))
 test_set = tf.data.Dataset.from_generator(bộ_phát_dữ_liệu, args=[test_file, batch_size], output_types=(tf.float32, tf.float32))
-"""
+
 # Kiểm tra generate data
 num = 0
 for data, label, calssw in train_set:
@@ -99,7 +99,7 @@ for data, label, calssw in train_set:
     #print(np.argmax(label, axis=None))
     num += 1
     if num>4: break
-"""
+
 
 
 def plot_history (history, yrange):
